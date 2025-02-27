@@ -7,10 +7,7 @@ YELLOW="\e[1m\e[1;33m"  # yellow color
 NC="\e[0m"          # no color
 
 function printLogo {
-  TEMP_FILE=$(mktemp)
-  curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh > "$TEMP_FILE"
-  bash "$TEMP_FILE"
-  rm -f "$TEMP_FILE"
+  curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh | bash
 }
 
 function printLine {
