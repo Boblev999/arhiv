@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -e "\033[0;34m"
 echo "     .o8                                   oooo                    oooo                                 oooo "
 echo "    \"888                                   \`888                    \`888                                 \`888     "
