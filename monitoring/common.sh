@@ -7,7 +7,15 @@ NC="\e[0m"            # без кольору
 
 # Функція для виведення логотипу (через curl)
 function printLogo {
-  bash <(curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh)
+  echo "Завантаження logo.sh..."
+  TEMP_FILE=$(mktemp)
+  if ! curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh > "$TEMP_FILE"; then
+    echo "Помилка: Не вдалося завантажити logo.sh."
+    return 1
+  fi
+  echo "Виконання logo.sh..."
+  bash "$TEMP_FILE"
+  rm -f "$TEMP_FILE"
 }
 # Функція для виведення лінії
 function printLine {
