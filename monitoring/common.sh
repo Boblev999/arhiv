@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Колірні константи
 GREEN="\e[1m\e[1;32m" # зелений колір
 RED="\e[1m\e[1;31m"   # червоний колір
@@ -9,10 +7,8 @@ NC="\e[0m"            # без кольору
 
 # Функція для виведення логотипу (через curl)
 function printLogo {
-  LOGO=$(curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh)
-  echo "$LOGO"
+  bash <(curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh)
 }
-
 # Функція для виведення лінії
 function printLine {
   echo "------------------------------------------------------------------------------------"
