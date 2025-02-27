@@ -5,7 +5,7 @@ YELLOW="\e[1m\e[1;33m"  # yellow color
 NC="\e[0m"          # no color
 
 function printLogo {
-  bash <(curl -s https://raw.githubusercontent.com/itrocket-team/testnet_guides/main/utils/logo.sh)
+  bash <(curl -s https://raw.githubusercontent.com/Boblev999/arhiv/refs/heads/main/monitoring/logo.sh)
 }
 
 function printLine {
